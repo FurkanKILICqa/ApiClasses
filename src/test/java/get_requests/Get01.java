@@ -58,7 +58,8 @@ public class Get01 {
 
     String url =    "https://restful-booker.herokuapp.com/booking/10";
 
-
+        //Eğer response u başka bir yerde kullanacaksak üstteki gibi yaparız
+        //Eğer tekseferde yapacaksak ve birdaha kullanmayacaksak bu şekilde yaparız
     given().
             when().
             get().
