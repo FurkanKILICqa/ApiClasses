@@ -56,6 +56,16 @@ public class Get01 {
     public void get02() {
 
 
+    String url =    "https://restful-booker.herokuapp.com/booking/10";
+
+
+    given().
+            when().
+            get().
+            then().
+            statusCode(200).
+            statusLine("application/json").
+            statusLine("HTTP/1.1 200 OK");
 
     }
 }
