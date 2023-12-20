@@ -1,6 +1,7 @@
 package get_requests;
 
 import io.restassured.response.Response;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -33,7 +34,7 @@ public class Get02 {
     public void name() {
 
         //i) Url kurulacak
-        String url = "https://restful-booker.herokuapp.com/booking/10";
+        String url = "https://restful-booker.herokuapp.com/booking/0";
 
 
         Response response = given().
@@ -42,6 +43,17 @@ public class Get02 {
 
         response.prettyPrint();
 
+
+       response.
+               then().
+               statusCode(404).//HTTP Status code should be 404
+               statusLine("HTTP/1.1 200 OK");//Status Line should be HTTP/1.1 404 Not Found
+
+
+      String responseSt =  response.asString();
+      Assert.assertTrue(responseSt.contains("Not Found"));
+
+      Assert.assertFalse();
 
 
     }
