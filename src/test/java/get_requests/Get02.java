@@ -47,13 +47,16 @@ public class Get02 {
        response.
                then().
                statusCode(404).//HTTP Status code should be 404
-               statusLine("HTTP/1.1 200 OK");//Status Line should be HTTP/1.1 404 Not Found
+               statusLine("HTTP/1.1 200 OK").//Status Line should be HTTP/1.1 404 Not Found
+               body()
+
 
 
       String responseSt =  response.asString();
       Assert.assertTrue(responseSt.contains("Not Found"));
+      Assert.assertFalse(responseSt.contains("TechProEd"));
 
-      Assert.assertFalse();
+      String server = response.header("Server");
 
 
     }
