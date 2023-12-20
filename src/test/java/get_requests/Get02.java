@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.not;
 
 public class Get02 {
 
@@ -47,8 +49,9 @@ public class Get02 {
        response.
                then().
                statusCode(404).//HTTP Status code should be 404
-               statusLine("HTTP/1.1 200 OK").//Status Line should be HTTP/1.1 404 Not Found
-               body()
+               statusLine("HTTP/1.1 200 OK")//Status Line should be HTTP/1.1 404 Not Found
+               .body(containsString("Not Found"))
+               .body(not(containsString("TechProEd")));
 
 
 
