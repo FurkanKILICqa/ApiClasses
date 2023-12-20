@@ -47,7 +47,15 @@ public class Get03 {
                 .body("completed",equalTo(false))
                 .body("userId",equalTo(2));
 
-            response.then().body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"));
+        // Hard Assertion: Hata aldığımızda testimiz çalışmayı durdurur.
+        // Body sorgularını farklı body metd yaparsak ---> Hard assertion
+        // Soft Assertion: Tek bir body metd bütün assertionları yaparsak
+        // soft assertion olur. ---> test çalışmayı sürdürür, bütün hataların log u alınır
+        response
+                .then()
+                .body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit")
+                        ,"completed",equalTo(false)
+                        ,"userId",equalTo(2));
 
 
 
