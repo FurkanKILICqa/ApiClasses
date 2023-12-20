@@ -35,8 +35,6 @@ public class Get04 {
                 setBaseUri(url).
                 setContentType(ContentType.JSON).build();
 
-        given(spec).when().get(url).prettyPrint();
-
 
 
 
