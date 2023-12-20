@@ -1,5 +1,6 @@
 package get_requests;
 
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -28,24 +29,25 @@ public class Get03 {
     @Test
     public void name() {
 
+        // i) Url kurulacak
         String url = "https://jsonplaceholder.typicode.com/todos/23";
 
-
-        Response response = given().
-                when().
-                get(url);
-
+        // ii) Beklenen data belirlenecek
+        // iii) Request gönderilip Response alınacak
+        Response response = given().when().get(url);
         response.prettyPrint();
 
-        response.
-                then().
-                statusCode(200).//HTTP Status Code should be 200
-                statusLine("HTTP/1.1 200 OK")
-                .body(containsString("Not Found"))
-                .body(not(containsString("TechProEd"))).
-                body("title",is("et itaque necessitatibus maxime molestiae qui quas velit"));
+        // iv) Doğrulamalar yapılacak
+        response
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"))
+                .body("title",is("et itaque necessitatibus maxime molestiae qui quas velit"))
+                .body("completed",equalTo(false))
+                .body("userId",equalTo(2));
 
-
+            response.then().body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"));
 
 
 
