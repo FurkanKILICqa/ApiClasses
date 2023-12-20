@@ -7,6 +7,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.not;
+import static org.junit.Assert.assertEquals;
 
 public class Get02 {
 
@@ -55,11 +56,13 @@ public class Get02 {
 
 
 
+
       String responseSt =  response.asString();
       Assert.assertTrue(responseSt.contains("Not Found"));
       Assert.assertFalse(responseSt.contains("TechProEd"));
-
       String server = response.header("Server");
+      assertEquals("Cowboy",server);
+
 
 
     }
