@@ -1,10 +1,10 @@
-package day02_RequestRespons;
+package get_requests;
 
 import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 
-public class C01_RequestResrpons {
+public class RequestResponse {
 
     /*
      1) Manuel testler için Postman kulllanacağız
@@ -38,8 +38,33 @@ public class C01_RequestResrpons {
        Response response = given().when().get(url);
         response.prettyPrint();
 
-        //Status code a nasıl ulaşılır / yazdılılır
 
+        // Status code'a nasıl ulaşılır / yazdırılır:
+        int statusCode =  response.statusCode();
+        System.out.println("statusCode = " + statusCode);
+        System.out.println(response.statusCode());
+        System.out.println("----------------------------------");
+
+        // Status Line'a nasıl ulaşılır / yazdırılır:
+        System.out.println(response.statusLine());
+        System.out.println("----------------------------------");
+
+        // ContentType' nasıl ulaşılır
+        System.out.println(response.contentType());
+        System.out.println("----------------------------------");
+
+        // Header değerlerine nasıl ulaşılır:
+        System.out.println(response.header("Server"));
+        System.out.println(response.header("Date"));
+        System.out.println("----------------------------------");
+
+        // Bütün headerlar nasıl alınır:
+        System.out.println(response.headers());
+        System.out.println("----------------------------------");
+
+        // Response süresi ni çağırma:
+        System.out.println(response.time());
+        System.out.println("----------------------------------");
 
 
     }
