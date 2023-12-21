@@ -6,6 +6,7 @@ import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.*;
 
 public class Get05 extends JsonPlaceHolderBaseUrl {
 
@@ -31,13 +32,25 @@ public class Get05 extends JsonPlaceHolderBaseUrl {
     @Test
     public void name() {
 
-        spec.pathParams("first","todos").accept(ContentType.JSON);
-
-
+        // i) Url kurulacak
+        int expectedSize = 200;
+        spec.pathParam("first","todos").accept(ContentType.JSON);
+        // ii) Beklenen data belirlenecek
+        // iii) Request gönderilip Response alınacak
         Response response = given(spec).when().get("{first}");
         response.prettyPrint();
-
-
+        // iv) Doğrulamalar yapılacak
+        response
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                // .body("[2].title",equalTo("fugiat veniam minus")); -----> Json listi olarak dönen bir yapıda herhangi bir elemente index kullanarak ulaşabiliriz
+                .body("title",hasSize(expectedSize)
+                        ,"title",hasItem("quis eius est sint explicabo")
+                        ,"userId",hasItems(2,7,9));
+        // hasSize() metodu list dönen yapının boyutunu döndürür.
+        // hasItem() metodu listte verilen değerin olup olmadığını kontrol eder
+        // hasItems() metodu listte verilen çoklu değerlerin olup olmadığını kontrol eder
 
 
 
