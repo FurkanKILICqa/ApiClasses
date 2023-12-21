@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1855bc0-1e8c-48cb-832b-04ed4b00f43c" name="Changes" comment="" />
+    <list default="true" id="d1855bc0-1e8c-48cb-832b-04ed4b00f43c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/base_urls/HerOkuAppBaseUrl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/base_urls/HerOkuAppBaseUrl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/get_requests/Get06.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/get_requests/Get06.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,23 +51,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hpvic\IdeaProjects\Batch189ApiDT\src\test\java\get_requests" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="base_urls" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.Get05.name">
-    <configuration name="Get01" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Batch189ApiDT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="get_requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="get_requests" />
-      <option name="MAIN_CLASS_NAME" value="get_requests.Get01" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Get06.name">
     <configuration name="Get02.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Batch189ApiDT" />
       <extension name="coverage">
@@ -128,13 +120,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Get06.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Batch189ApiDT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="get_requests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="get_requests" />
+      <option name="MAIN_CLASS_NAME" value="get_requests.Get06" />
+      <option name="METHOD_NAME" value="name" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Get06.name" />
         <item itemvalue="JUnit.Get05.name" />
         <item itemvalue="JUnit.Get04.name" />
         <item itemvalue="JUnit.Get02.name" />
         <item itemvalue="JUnit.Get03.name" />
-        <item itemvalue="JUnit.Get01" />
       </list>
     </recent_temporary>
   </component>
