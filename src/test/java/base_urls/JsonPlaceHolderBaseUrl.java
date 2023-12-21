@@ -11,8 +11,8 @@ public class JsonPlaceHolderBaseUrl {
     @Before//Her test den önce çalışacak
     public void setUp(){
 
-        String url = "https://jsonplaceholder.typicode.com/todos/23";
-        spec= new RequestSpecBuilder().setBaseUri(url).build();
+        String baseUrl = "https://jsonplaceholder.typicode.com";
+        spec= new RequestSpecBuilder().setBaseUri(baseUrl).build();
 
 
     }
