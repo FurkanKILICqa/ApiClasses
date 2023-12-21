@@ -1,7 +1,11 @@
 package get_requests;
 
 import base_urls.JsonPlaceHolderBaseUrl;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.Test;
+
+import static io.restassured.RestAssured.given;
 
 public class Get05 extends JsonPlaceHolderBaseUrl {
 
@@ -27,7 +31,11 @@ public class Get05 extends JsonPlaceHolderBaseUrl {
     @Test
     public void name() {
 
-        spec.pathParams("first","todos");
+        spec.pathParams("first","todos").accept(ContentType.JSON);
+
+
+        Response response = given(spec).when().get("{first}");
+        response.prettyPrint();
 
 
 
