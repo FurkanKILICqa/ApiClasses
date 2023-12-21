@@ -1,9 +1,13 @@
 package get_requests;
 
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.Test;
 import base_urls.JsonPlaceHolderBaseUrl;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
 
 public class Get04 extends JsonPlaceHolderBaseUrl {
 
@@ -30,11 +34,24 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
 
         // i) Url kurulacak
         spec.pathParams("first","todos","second",23);
+
         // ii) Beklenen data belirlenecek
+
+
         // iii) Request gönderilip Response alınacak
 
-        given(spec).when().get().prettyPrint();
+      Response response = given(spec).when().get("{first}/{second}");
+      response.prettyPrint();
+
         // iv) Doğrulamalar yapılacak
+        response
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"))
+                .body("title",is("et itaque necessitatibus maxime molestiae qui quas velit"))
+                .body("completed",equalTo(false))
+                .body("userId",equalTo(2));
 
 
 
