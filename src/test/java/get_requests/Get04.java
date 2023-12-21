@@ -29,7 +29,7 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
 
 
         // i) Url kurulacak
-
+        spec.pathParams("first","todos","second",23);
         // ii) Beklenen data belirlenecek
         // iii) Request gönderilip Response alınacak
 
