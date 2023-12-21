@@ -1,13 +1,11 @@
 package get_requests;
 
-import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import org.junit.Test;
+import base_urls.JsonPlaceHolderBaseUrl;
 
 import static io.restassured.RestAssured.given;
 
-public class Get04 {
+public class Get04 extends JsonPlaceHolderBaseUrl {
 
     /*
         Given
@@ -29,11 +27,14 @@ public class Get04 {
     @Test
     public void name() {
 
-        String url = "https://jsonplaceholder.typicode.com/todos/23";
 
-        RequestSpecBuilder spec = (RequestSpecBuilder) new RequestSpecBuilder().
-                setBaseUri(url).
-                setContentType(ContentType.JSON).build();
+        // i) Url kurulacak
+
+        // ii) Beklenen data belirlenecek
+        // iii) Request gönderilip Response alınacak
+
+        given(spec).when().get().prettyPrint();
+        // iv) Doğrulamalar yapılacak
 
 
 
