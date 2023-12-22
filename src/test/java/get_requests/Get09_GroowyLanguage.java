@@ -79,7 +79,7 @@ public class Get09_GroowyLanguage extends JsonPlaceHolderBaseUrl {
             List<String> titlesLessThanFive = json.getList("findAll{it.id<5}.title");
             System.out.println(titlesLessThanFive);
 
-            //Assert that "delectus aut autem" is one of the titles whose id is less than 55588585
+            //Assert that "delectus aut autem" is one of the titles whose id is less than 5
             assertTrue(titlesLessThanFive.contains("delectus aut autem"));
 
         }
