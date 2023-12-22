@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.CoreMatchers.equalTo;
 
 public class Get07 extends JsonPlaceHolderBaseUrl {
 
@@ -41,14 +42,27 @@ public class Get07 extends JsonPlaceHolderBaseUrl {
     @Test
     public void name() {
 
-        spec.pathParams("first","booking","second,11");
+        //  i)  Url belirlenir
+        spec.pathParams("first","booking"
+                ,"second",11);
 
-       Response response = given(spec).when().get("{first}","{second}");
+        //  ii) Beklenen data belirlenir
+        //  iii) Request gönderilip Response alınır
+        Response response = given(spec).when().get("{first}/{second}");
         response.prettyPrint();
 
-
-        response.then().statusCode(200).contentType(ContentType.JSON).body()
-
+        //  iv)) Doğrulamalar yapılır
+        response
+                .then()
+                .statusCode(200)
+                .contentType(ContentType.JSON)
+                .body("firstname",equalTo("Josh")
+                        ,"lastname",equalTo("Allen")
+                        ,"totalprice",equalTo(111)
+                        ,"depositpaid",equalTo(true)
+                        ,"bookingdates.checkin",equalTo("2018-01-01")
+                        ,"bookingdates.checkout",equalTo("2019-01-01")
+                        ,"additionalneeds",equalTo("midnight snack"));
 
     }
 }
