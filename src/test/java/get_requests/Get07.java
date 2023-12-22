@@ -1,5 +1,7 @@
 package get_requests;
 
+import org.junit.Test;
+
 public class Get07 {
 
     /*
@@ -24,15 +26,19 @@ public class Get07 {
                             },
                             "additionalneeds": "Breakfast"
                         }
+
+                        Task 1
+
+
      */
 
+    @Test
+    public void name() {
 
 
 
 
 
 
-
-
-
+    }
 }
