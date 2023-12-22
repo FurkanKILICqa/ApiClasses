@@ -1,8 +1,14 @@
 package get_requests;
 
+import base_urls.JsonPlaceHolderBaseUrl;
+import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
 import org.junit.Test;
 
-public class Get07 {
+import static io.restassured.RestAssured.given;
+
+public class Get07 extends JsonPlaceHolderBaseUrl {
 
     /*
         Given
@@ -35,9 +41,13 @@ public class Get07 {
     @Test
     public void name() {
 
+        spec.pathParams("first","booking","second,11");
+
+       Response response = given(spec).when().get("{first}","{second}");
+        response.prettyPrint();
 
 
-
+        response.then().statusCode(200).contentType(ContentType.JSON).body()
 
 
     }
