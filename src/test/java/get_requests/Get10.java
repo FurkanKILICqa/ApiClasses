@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
 import static test_data.JsonPlaceHolderTestData.jsonPlaceHolderMapper;
 
 public class Get10 extends JsonPlaceHolderBaseUrl {
@@ -42,7 +43,7 @@ public class Get10 extends JsonPlaceHolderBaseUrl {
         spec.pathParams("first","todos"
                 ,"second",2);
 
-
+        //Beklenen data kuralları
         Map<String,Object> expectedData=jsonPlaceHolderMapper(1,"quis ut nam facilis et officia qui",false);
 
 
@@ -51,7 +52,10 @@ public class Get10 extends JsonPlaceHolderBaseUrl {
 
 
         //Doğrulamalar yapilir:
-
+        Map<String,Object> actualData = response.as(HashMap.class);
+        assertEquals("quis ut nam facilis et officia qui",actualData.get("title"));
+        assertEquals(1,actualData.get("id"));
+        assertEquals(false,actualData.get("completed"));
 
 
 
