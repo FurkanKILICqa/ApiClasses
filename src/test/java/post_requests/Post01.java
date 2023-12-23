@@ -41,6 +41,10 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
                 "                 \"completed\": false\n" +
                 "              }";
 
+        System.out.println(payLoad);
+
+
+        //Request Gönder Response Alınır
 
 
 
