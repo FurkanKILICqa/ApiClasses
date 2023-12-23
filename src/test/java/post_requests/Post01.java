@@ -2,6 +2,7 @@ package post_requests;
 
 import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
 
@@ -51,6 +52,11 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
         //Request Gönder Response Alınır
        Response response = given(spec).body(payLoad).contentType(ContentType.JSON).when().post("{first}");
        response.prettyPrint();
+
+
+        JsonPath jsonPath = response.jsonPath();
+
+
 
 
 
