@@ -1,8 +1,12 @@
 package get_requests;
 
+import base_urls.JsonPlaceHolderBaseUrl;
+import io.restassured.response.Response;
 import org.junit.Test;
 
-public class Get10 {
+import static io.restassured.RestAssured.given;
+
+public class Get10 extends JsonPlaceHolderBaseUrl {
 
     /*
     Given
@@ -29,6 +33,16 @@ public class Get10 {
 
     @Test
     public void name() {
+
+
+        spec.pathParams("first","todos"
+                ,"second",2);
+
+        Response response = given(spec).when().get("{first}/{second}");
+        response.prettyPrint();
+
+
+
 
 
 
