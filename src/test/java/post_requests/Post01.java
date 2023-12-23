@@ -92,8 +92,15 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
         // Serialization, Serializer denen JAckson Databind, Gson , Yasson gibi dependencyleri pom a yüklemek ile halledilir
 
         //Doğrular yapılır
-        Map<String,Object> actualData = response.as(HashMap.class);
+        Map<String,Object> actualData = response.as(HashMap.class);//HashMap rasgele sıralar map gibi değildir
         System.out.println(actualData);
+
+        Assert.assertEquals(201,response.statusCode());
+        Assert.assertEquals(payload.get("userId"), actualData.get("userId"));
+        Assert.assertEquals(payload.get("title"),actualData.get("title"));
+        Assert.assertEquals(payload.get("completed"),actualData.get("completed"));
+
+
 
     }
 }
