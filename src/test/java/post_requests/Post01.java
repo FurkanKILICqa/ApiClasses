@@ -91,5 +91,9 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
         // Serialization: Java objesini Json Objesine dönüştürme işlemine denir
         // Serialization, Serializer denen JAckson Databind, Gson , Yasson gibi dependencyleri pom a yüklemek ile halledilir
 
+        //Doğrular yapılır
+        Map<String,Object> actualData = response.as(HashMap.class);
+        System.out.println(actualData);
+
     }
 }
