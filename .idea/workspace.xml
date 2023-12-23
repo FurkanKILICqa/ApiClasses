@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1855bc0-1e8c-48cb-832b-04ed4b00f43c" name="Changes" comment="" />
+    <list default="true" id="d1855bc0-1e8c-48cb-832b-04ed4b00f43c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/post_requests/Post01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/post_requests/Post01.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,23 +54,7 @@
       <recent name="base_urls" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Get07.name">
-    <configuration name="Get02.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Batch189ApiDT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="get_requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="get_requests" />
-      <option name="MAIN_CLASS_NAME" value="get_requests.Get02" />
-      <option name="METHOD_NAME" value="name" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Post01.post">
     <configuration name="Get04.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Batch189ApiDT" />
       <extension name="coverage">
@@ -132,13 +119,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Post01.post" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Batch189ApiDT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="post_requests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="post_requests" />
+      <option name="MAIN_CLASS_NAME" value="post_requests.Post01" />
+      <option name="METHOD_NAME" value="post" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Post01.post" />
         <item itemvalue="JUnit.Get07.name" />
         <item itemvalue="JUnit.Get06.name" />
         <item itemvalue="JUnit.Get05.name" />
         <item itemvalue="JUnit.Get04.name" />
-        <item itemvalue="JUnit.Get02.name" />
       </list>
     </recent_temporary>
   </component>
