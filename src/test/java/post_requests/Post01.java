@@ -4,7 +4,11 @@ import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.junit.Assert;
 import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -56,12 +60,36 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
 
         JsonPath jsonPath = response.jsonPath();
 
+        Assert.assertEquals(201,response.statusCode());
+        Assert.assertEquals(55, jsonPath.getInt("UserId"));
+        Assert.assertEquals("Tidy your room",jsonPath.getString("title"));
+        Assert.assertFalse(jsonPath.getBoolean("completed"));
 
 
+    }
+
+    @Test
+    public void postMap() {
+
+        //Url Olusturulacak
+        spec.pathParams("first","todos");
 
 
+        Map<String,Object> payload = new HashMap<>();
+        payload.put("userId",555);
+        payload.put("title","Tidy your room");
+        payload.put("completed",false);
 
+        //Requst Gönder Response al
+        Response response = given(spec).body(payload).when().post("{first}");
+        response.prettyPrint();
+        /*  IllegalStateException Jackson (Databind), Gson, Johnzon, or Yasson in the classpath
+        body(payLoad) içinde ki dataları dönüştüremediği için hata veriyorsa ;
+        Serialization : Java objesini Json Objesine dönüştüme işlmeine denir
+        */
 
+        // Serialization: Java objesini Json Objesine dönüştürme işlemine denir
+        // Serialization, Serializer denen JAckson Databind, Gson , Yasson gibi dependencyleri pom a yüklemek ile halledilir
 
     }
 }
