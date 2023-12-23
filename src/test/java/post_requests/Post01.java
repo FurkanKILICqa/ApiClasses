@@ -48,7 +48,10 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
 
 
         //Request Gönder Response Alınır
-       Response response = given(spec).when().post("{first}");
+       Response response = given(spec).body(payLoad).when().post("{first}");
+       response.prettyPrint();
+
+
 
 
 
