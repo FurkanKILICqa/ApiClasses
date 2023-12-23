@@ -1,6 +1,7 @@
 package post_requests;
 
 import base_urls.JsonPlaceHolderBaseUrl;
+import io.restassured.response.Response;
 import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
@@ -47,7 +48,7 @@ public class Post01 extends JsonPlaceHolderBaseUrl {
 
 
         //Request Gönder Response Alınır
-        given(spec)
+       Response response = given(spec).when().post("{first}");
 
 
 
