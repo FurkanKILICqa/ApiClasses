@@ -54,23 +54,7 @@
       <recent name="base_urls" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Put01.put">
-    <configuration name="Get06.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Batch189ApiDT" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="get_requests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="get_requests" />
-      <option name="MAIN_CLASS_NAME" value="get_requests.Get06" />
-      <option name="METHOD_NAME" value="name" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.Get10.name">
     <configuration name="Get07.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Batch189ApiDT" />
       <extension name="coverage">
@@ -81,6 +65,22 @@
       </extension>
       <option name="PACKAGE_NAME" value="get_requests" />
       <option name="MAIN_CLASS_NAME" value="get_requests.Get07" />
+      <option name="METHOD_NAME" value="name" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Get10.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Batch189ApiDT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="get_requests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="get_requests" />
+      <option name="MAIN_CLASS_NAME" value="get_requests.Get10" />
       <option name="METHOD_NAME" value="name" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -137,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.Get10.name" />
         <item itemvalue="JUnit.Put01.put" />
         <item itemvalue="JUnit.Post01.postMap" />
         <item itemvalue="JUnit.Post01.post" />
         <item itemvalue="JUnit.Get07.name" />
-        <item itemvalue="JUnit.Get06.name" />
       </list>
     </recent_temporary>
   </component>

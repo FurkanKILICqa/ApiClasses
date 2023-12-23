@@ -4,7 +4,11 @@ import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.response.Response;
 import org.junit.Test;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import static io.restassured.RestAssured.given;
+import static test_data.JsonPlaceHolderTestData.jsonPlaceHolderMapper;
 
 public class Get10 extends JsonPlaceHolderBaseUrl {
 
@@ -38,10 +42,15 @@ public class Get10 extends JsonPlaceHolderBaseUrl {
         spec.pathParams("first","todos"
                 ,"second",2);
 
+
+        Map<String,Object> expectedData=jsonPlaceHolderMapper(1,"quis ut nam facilis et officia qui",false);
+
+
         Response response = given(spec).when().get("{first}/{second}");
         response.prettyPrint();
 
 
+        //Doğrulamalar yapilir:
 
 
 
