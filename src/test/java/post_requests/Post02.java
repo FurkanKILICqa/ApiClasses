@@ -48,7 +48,7 @@ public class Post02 extends JsonPlaceHolderBaseUrl {
         assertEquals(payload.get("completed"),actualData.get("completed"));
     }
 
-    // Post01 deki task map oluşturmayı metod içinde hallederek geliştirildisxs
+    // Post01 deki task map oluşturmayı metod içinde hallederek geliştirildi
     @Test
     public void postMap(){
         // Url Oluşturulacak
