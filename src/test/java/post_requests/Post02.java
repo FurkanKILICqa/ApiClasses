@@ -32,7 +32,7 @@ public class Post02 extends JsonPlaceHolderBaseUrl {
         response.prettyPrint();
         /*  IllegalStateException Jackson (Databind), Gson, Johnzon, or Yasson in the classpath
         body(payLoad) içinde ki dataları dönüştüremediği için hata veriyorsa ;
-        Serialization : Java objesini Json Objesine dönüştüme işlmeine denir
+        Serialization : Java objesini Json Objesine dönüştüme işlmeine denirsdsf
         */
 
         // Serialization: Java objesini Json Objesine dönüştürme işlemine denirasfasf
