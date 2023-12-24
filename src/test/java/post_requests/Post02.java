@@ -35,7 +35,7 @@ public class Post02 extends JsonPlaceHolderBaseUrl {
         Serialization : Java objesini Json Objesine dönüştüme işlmeine denirsdsf
         */
 
-        // Serialization: Java objesini Json Objesine dönüştürme işlemine denirasfasf
+        // Serialization: Java objesini Json Objesine dönüştürme işlemine denir
         // Serialization, Serializer denen JAckson Databind, Gson , Yasson gibi dependencyleri pom a yüklemek ile halledilir
 
         //Doğrular yapılır
