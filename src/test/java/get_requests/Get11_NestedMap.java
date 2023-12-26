@@ -3,6 +3,7 @@ package get_requests;
 import base_urls.JsonPlaceHolderBaseUrl;
 import org.junit.Test;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
@@ -40,7 +41,10 @@ public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
         //Nested yapılır beklerken data en içteki yapıdan başlayarak olusturulur
 
 
-        Map<String,String> bookingMap
+        Map<String,String> bookingMap = new HashMap<>();
+        bookingMap.put("checkin","2018-01-01");
+        bookingMap.put("checkout","2019-01-01");
+        System.out.println(bookingMap);
 
 
 
