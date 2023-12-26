@@ -1,5 +1,7 @@
 package get_requests;
 
+import org.junit.Test;
+
 public class Get11_NestedMap {
 
 
@@ -22,4 +24,14 @@ public class Get11_NestedMap {
                     "additionalneeds": "Extra pillows please"
                 }
      */
+
+    @Test
+    public void name() {
+       //Url kurulacak
+
+
+
+
+
+    }
 }
