@@ -1,11 +1,11 @@
 package get_requests;
 
 import base_urls.HerOkuAppBaseUrl;
-import base_urls.JsonPlaceHolderBaseUrl;
+
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
-import test_data.HerokuAppTestData;
+
 
 import java.util.HashMap;
 import java.util.Map;
