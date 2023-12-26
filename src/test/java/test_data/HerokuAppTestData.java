@@ -22,6 +22,8 @@ public class HerokuAppTestData {
     public static Map<String,Object> herokuAppMapper(){
         Map<String,Object> map = new HashMap<>();
 
+        map.put("checkin",checkin);
+        map.put("checkout",checkout);
 
 
 
