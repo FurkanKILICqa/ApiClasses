@@ -1,5 +1,6 @@
 package get_requests;
 
+import base_urls.HerOkuAppBaseUrl;
 import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -15,7 +16,7 @@ import static org.junit.Assert.assertEquals;
 import static test_data.HerokuAppTestData.bookingMapper;
 import static test_data.HerokuAppTestData.herokuAppMapper;
 
-public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
+public class Get11_NestedMap extends HerOkuAppBaseUrl {
 
 
     /*
