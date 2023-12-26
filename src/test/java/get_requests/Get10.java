@@ -56,8 +56,9 @@ public class Get10 extends JsonPlaceHolderBaseUrl {
         assertEquals("quis ut nam facilis et officia qui",actualData.get("title"));
         assertEquals(1,actualData.get("id"));
         assertEquals(false,actualData.get("completed"));
-
-
+        //And     header "Via" is "1.1 vegur"
+        assertEquals("1.1 vegur",response.header("Via"));
+        assertEquals("");
 
 
 
