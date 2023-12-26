@@ -4,6 +4,7 @@ import base_urls.JsonPlaceHolderBaseUrl;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.junit.Test;
+import test_data.HerokuAppTestData;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,32 +12,33 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertEquals;
+import static test_data.HerokuAppTestData.bookingMapper;
+import static test_data.HerokuAppTestData.herokuAppMapper;
 
 public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
 
 
     /*
-        Given
-            https://restful-booker.herokuapp.com/booking/51
-        When
-            I send GET Request to the url
-        Then
-            Response body should be like that;
-                {
-                    "firstname": "Jane",
-                    "lastname": "Doe",
-                    "totalprice": 111,
-                    "depositpaid": true,
-                    "bookingdates": {
-                        "checkin": "2018-01-01",
-                        "checkout": "2019-01-01"
-                    },
-                    "additionalneeds": "Extra pillows please"
-                }
-     */
-
+       Given
+           https://restful-booker.herokuapp.com/booking/50
+       When
+           I send GET Request to the url
+       Then
+           Response body should be like that;
+               {
+                   "firstname": "Jane",
+                   "lastname": "Doe",
+                   "totalprice": 111,
+                   "depositpaid": true,
+                   "bookingdates": {
+                       "checkin": "2018-01-01",
+                       "checkout": "2019-01-01"
+                   },
+                   "additionalneeds": "Extra pillows please"
+               }
+    */
     @Test
-    public void name() {
+    public void get(){
         // Url Kurulur:
         spec.pathParams("first","booking"
                 ,"second",50) ;
@@ -87,9 +89,8 @@ public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
         assertEquals(bookingMap.get("checkout"),((Map)actualData.get("bookingdates")).get("checkout"));
         assertEquals(expectedData.get("additionalneeds"),actualData.get("additionalneeds"));
     }
-
     @Test
-    public void name2() {
+    public void get11b(){
         // Url Kurulur:
         spec.pathParams("first","booking"
                 ,"second",50) ;
@@ -98,18 +99,10 @@ public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
 
         // Nested yapılarda beklenen data en içteki yapıdan başlayarak oluşturulur
 
-        Map<String,String> bookingMap = new HashMap<>();
-        bookingMap.put("checkin","2018-01-01");
-        bookingMap.put("checkout","2019-01-01");
+        Map<String,String> bookingMap = bookingMapper("2018-01-01","2019-01-01");
         System.out.println("bookingMap = " + bookingMap);
 
-        Map<String,Object> expectedData = new HashMap<>();
-        expectedData.put("firstname","Jane");
-        expectedData.put("lastname","Doe");
-        expectedData.put("totalprice",111);
-        expectedData.put("depositpaid",true);
-        expectedData.put("bookingdates",bookingMap);
-        expectedData.put("additionalneeds","Extra pillows please");
+        Map<String,Object> expectedData = herokuAppMapper("Jane","Doe",111,true,bookingMap,"Extra pillows please");
         System.out.println("expectedData = " + expectedData);
 
         // Request---- Response
@@ -139,9 +132,10 @@ public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
         assertEquals(((Map)expectedData.get("bookingdates")).get("checkin") ,((Map)actualData.get("bookingdates")) .get("checkin"));
         assertEquals(bookingMap.get("checkout"),((Map)actualData.get("bookingdates")).get("checkout"));
         assertEquals(expectedData.get("additionalneeds"),actualData.get("additionalneeds"));
+    }
 
 
     }
-}
+
 
 
