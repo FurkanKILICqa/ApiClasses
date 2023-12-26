@@ -1,8 +1,11 @@
 package get_requests;
 
+import base_urls.JsonPlaceHolderBaseUrl;
 import org.junit.Test;
 
-public class Get11_NestedMap {
+import java.util.Map;
+
+public class Get11_NestedMap extends JsonPlaceHolderBaseUrl {
 
 
     /*
@@ -28,7 +31,16 @@ public class Get11_NestedMap {
     @Test
     public void name() {
        //Url kurulacak
+        spec.pathParams("first","booking","second",51);
 
+
+        //Beklenen data kurulur
+
+
+        //Nested yapılır beklerken data en içteki yapıdan başlayarak olusturulur
+
+
+        Map<String,String> bookingMap
 
 
 
