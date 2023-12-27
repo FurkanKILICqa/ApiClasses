@@ -7,12 +7,21 @@ public class JsonPlaceHolderTestData {
 
 
 
-    public static Map<String,Object> jsonPlaceHolderMapper(int userId,String title,boolean complated){
+    public static Map<String,Object> jsonPlaceHolderMapper(Integer userId,String title,Boolean complated){
 
         Map<String,Object> map = new HashMap<>();
-        map.put("userId",userId);
-        map.put("title",title);
-        map.put("completed",complated);
+        if (userId!=null) {
+            map.put("userId",userId);
+        }
+        if (title!=null){
+            map.put("title",title);
+        }
+
+        if (complated!=null){
+
+            map.put("completed",complated);
+        }
+
 
         return map;
     }
