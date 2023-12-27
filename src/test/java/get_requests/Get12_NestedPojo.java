@@ -1,6 +1,15 @@
 package get_requests;
 
-public class Get12_NestedPojo {
+import base_urls.JsonPlaceHolderBaseUrl;
+import io.restassured.response.Response;
+import org.junit.Test;
+import pojos.BookingPojo;
+import pojos.HerokuAppPojo;
+
+import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
+
+public class Get12_NestedPojo extends JsonPlaceHolderBaseUrl {
 
 /*
         Given
