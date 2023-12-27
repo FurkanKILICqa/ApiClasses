@@ -12,7 +12,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
 
-public class Post03 extends HerOkuAppBaseUrl {
+public class Post03_Map extends HerOkuAppBaseUrl {
 
 /*
     Given
