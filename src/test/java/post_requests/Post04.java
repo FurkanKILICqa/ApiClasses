@@ -26,6 +26,9 @@ public class Post04 extends JsonPlaceHolderBaseUrl {
                                     "completed": false,
                                     "id": 201
                                     }
+                                    NOT:
+    @JsonIgnoreProperties(ignoreUnknown = true) annotasyonu, JSON verisindeki bilinmeyen alanları yoksaymak için kullanılır.
+    Bu annotasyon, Java sınıfındaki alanlarla eşleşmeyen veya bilinmeyen JSON alanlarını görmezden gelir.
      */
 
     @Test
