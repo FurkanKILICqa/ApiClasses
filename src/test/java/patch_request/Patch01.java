@@ -17,7 +17,7 @@ public class Patch01 extends JsonPlaceHolderBaseUrl {
         Given
 	        1) https://jsonplaceholder.typicode.com/todos/198
 	        2) {
-                 "title": "Wash the dishes gg hh hh kk jj ıı oo yy"
+                 "title": "Wash the dishes gg hh hh kk jj ıı oo yy oo"
                }
         When
 	 		I send PATCH Request to the Url
