@@ -20,7 +20,7 @@ public class Get06 extends HerOkuAppBaseUrl {
        When
            User sends get request to the URL
        Then
-           Status code is 200
+           Status code is 200afads
        And
            Among the data there should be someone whose firstname is "John" and lastname is "Smith"
     */
