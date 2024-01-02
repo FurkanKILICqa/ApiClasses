@@ -53,7 +53,7 @@ public class RequestResponse {
         System.out.println(response.contentType());
         System.out.println("----------------------------------");
 
-        // Header değerlerine nasıl ulaşılır: 33 44 55
+        // Header değerlerine nasıl ulaşılır: 33 44 55 66
         System.out.println(response.header("Server"));
         System.out.println(response.header("Date"));
         System.out.println("----------------------------------");
