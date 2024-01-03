@@ -18,7 +18,7 @@ public class Get06 extends HerOkuAppBaseUrl {
        Given
            https://restful-booker.herokuapp.com/booking
        When
-           User sends get request to the URL 11 22 33 44 55
+           User sends get request to the URL
        Then
            Status code is 200
        And
