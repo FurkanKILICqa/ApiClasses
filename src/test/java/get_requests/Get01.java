@@ -14,7 +14,7 @@ public class Get01 {
           When
               User sends a GET Request to the url
           Then
-              HTTP Status Code should be 200 11 22 33
+              HTTP Status Code should be 200 11 22 33 44
           And
               Content Type should be application/json
           And
