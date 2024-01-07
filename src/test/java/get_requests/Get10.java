@@ -19,7 +19,7 @@ public class Get10 extends JsonPlaceHolderBaseUrl {
     When
         I send GET Request to the URL
     Then
-        Status code is 200 55 66
+        Status code is 200 55 66 77
     And
         "completed" is false
     And
