@@ -35,7 +35,7 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
         // i) Url kurulacak
         spec.pathParams("first","todos","second",23);
 
-        // ii) Beklenen data belirlenecek dfsdf
+        // ii) Beklenen data belirlenecek
 
 
         // iii) Request gönderilip Response alınacak
@@ -51,7 +51,8 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
                 .body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"))
                 .body("title",is("et itaque necessitatibus maxime molestiae qui quas velit"))
                 .body("completed",equalTo(false))
-                .body("userId",equalTo(2));
+                .body("userId",equalTo(2))
+        .body()
 
 
 
