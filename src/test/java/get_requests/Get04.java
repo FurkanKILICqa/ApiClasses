@@ -15,7 +15,7 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
         Given
             https://jsonplaceholder.typicode.com/todos/23
         When
-            User send GET Request to the URL adf 666
+            User send GET Request to the URL adf 666 996
         Then
             HTTP Status Code should be 200
 		And
