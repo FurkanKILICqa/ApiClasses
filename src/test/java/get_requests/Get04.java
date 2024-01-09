@@ -15,7 +15,7 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
         Given
             https://jsonplaceholder.typicode.com/todos/23
         When
-            User send GET Request to the URL
+            User send GET Request to the URL adf
         Then
             HTTP Status Code should be 200
 		And
@@ -51,8 +51,8 @@ public class Get04 extends JsonPlaceHolderBaseUrl {
                 .body("title",equalTo("et itaque necessitatibus maxime molestiae qui quas velit"))
                 .body("title",is("et itaque necessitatibus maxime molestiae qui quas velit"))
                 .body("completed",equalTo(false))
-                .body("userId",equalTo(2))
-        .body()
+                .body("userId",equalTo(2));
+
 
 
 
