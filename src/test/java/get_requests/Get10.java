@@ -21,7 +21,7 @@ public class Get10 extends JsonPlaceHolderBaseUrl {
     Then
         Status code is 200
     And
-        "completed" is false 22 66
+        "completed" is false 22 66 99
     And
         "userId" is 1
     And     "title" is "quis ut nam facilis et officia qui"
